@@ -1,0 +1,11 @@
+// *************************************************************************************
+// - Övergripande
+//  
+// Plocklista för inloggat bibliotek
+// ver 1
+// 2019-10-31
+// Kompatibelt med 19.05
+
+  $('<li><a href="" id="plock">Plocklista ()</a></li>').appendTo('#toplevelmenu');
+  $('#plock').attr('href', 'https://' + window.location.hostname + '/cgi-bin/koha/circ/view_holdsqueue.pl?branchlimit=' + $('.logged-in-branch-code:first').text() + '&run_report=1');
+  $('#plock').text('Plocklista (' + $('.logged-in-branch-code:first').text() + ')');
